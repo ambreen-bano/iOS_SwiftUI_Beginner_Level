@@ -10,6 +10,7 @@ import SwiftUI
 //All the modifiers which we have applied on circle, can be applied on other shapes too.
 struct ContentView: View {
     var body: some View {
+        Text("SwiftUI_Shapes")
         Circle()
     }
 }
