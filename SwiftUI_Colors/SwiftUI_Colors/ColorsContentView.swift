@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-struct SwiftUI_Colors: View {
+struct ColorsContentView: View {
     var body: some View {
         
         //Fixed color - for both Light/Dark Mode
@@ -51,11 +51,11 @@ struct SwiftUI_Colors: View {
 }
 
 #Preview {
-    SwiftUI_Colors()
+    ColorsContentView()
         .preferredColorScheme(.light)
 }
 
 #Preview {
-    SwiftUI_Colors()
+    ColorsContentView()
         .preferredColorScheme(.dark)
 }
