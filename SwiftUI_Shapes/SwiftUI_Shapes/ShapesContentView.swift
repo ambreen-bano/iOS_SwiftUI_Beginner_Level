@@ -11,29 +11,31 @@ import SwiftUI
 struct ShapesContentView: View {
     var body: some View {
         
-        Circle()
+        Circle() //Default is Fill with Black
         
         Circle()
-            .fill(Color.green)
+            .fill(Color.green) //Fill with Color
         
         Circle()
-            .foregroundColor(.red)
+            .foregroundColor(.red) //Fill with Color
         
         Circle()
-            .stroke()
+            .stroke() //ONLY outline of the shape
         
         Circle()
-            .stroke(Color.red)
+            .stroke(Color.red) //Outline of the shape with specified color
         
         Circle()
-            .stroke(Color.red, lineWidth: 10)
+            .stroke(Color.red, lineWidth: 10) //Outline of the shape with specified color and width
         
-        //lineCap is stroke shape, dash is spacing between stroke line
+        
+        //We can customize shape drawing as - lineCap is stroke shape, dash is spacing between stroke line
         Circle()
             .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .square, dash: [10]))
         
         //trim use to show portion of the shapes
         //0 to 1 is full shape
+        //0.5 is half
         Circle()
             .trim(from: 0.5, to: 1)
         
