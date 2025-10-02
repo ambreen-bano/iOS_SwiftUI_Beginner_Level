@@ -14,6 +14,7 @@ import SwiftUI
 
 struct TextContentView: View {
     var body: some View {
+        Spacer()
         
         Text("Added by typing Text()".uppercased())
         
@@ -73,25 +74,24 @@ struct TextContentView: View {
         //By default text is left aligned
         Text("If the preview canvas does not appear or behaves unexpectedly .....")
         
-        Text ("Spacing")
-        
-        //Text will center aligned
-        Text("If the preview canvas does not appear or behaves unexpectedly .....")
+        //Text will center aligned and multiline
+        Text("Multi - If the preview canvas does not appear or behaves unexpectedly .....")
             .multilineTextAlignment(.center)
         
-        Text ("Spacing")
+        Spacer()
        
         
         
         
         //Line spacing for bottom in lines
-        Text("If the preview canvas does not appear or behaves unexpectedly .....")
+        Text("baselineOffset - If the preview canvas does not appear or behaves unexpectedly. line spacing top in line")
+            .multilineTextAlignment(.center)
             .baselineOffset(20)
         
-        Text("Spacing")
         
         //Line spacing for top in lines
-        Text("If the preview canvas does not appear or behaves unexpectedly .....")
+        Text("baselineOffset - If the preview canvas does not appear or behaves unexpectedly. line spacing top in line")
+            .multilineTextAlignment(.center)
             .baselineOffset(-20)
         
         
@@ -117,6 +117,19 @@ struct TextContentView: View {
         Text("Hi Ambreen")
             .frame(width: 300, height: 30, alignment: .leading)
         
+        
+        
+        
+        
+        //Allow text to COPY or SHARE
+        //.textSelection allow text COPY and SHARE
+        Text("COPY and SHARE with Long Press/Manual Selection")
+            .textSelection(.enabled)
+            .textSelectionAffinity(.downstream) //selection toward the end of the text when we drag.
+        
+        Text("COPY and SHARE ONLY with Long Press ")
+            .textSelection(.disabled)
+        Spacer()
     }
 }
 
