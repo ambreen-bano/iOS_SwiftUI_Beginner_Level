@@ -10,6 +10,7 @@ import SwiftUI
 struct GradientsContentView: View {
     var body: some View {
         
+        Spacer()
         //Default Gradient is Linear and direction is Top to Bottom
         RoundedRectangle(cornerRadius: 10)
             .fill(Gradient(colors: [Color.red, Color.green]))
@@ -39,8 +40,8 @@ struct GradientsContentView: View {
         //endRadius - blurr effect end
         //Radial Gradient, center: Center for radial/circular effect
         RoundedRectangle(cornerRadius: 10)
-            .fill(RadialGradient(colors: [Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1))], center: .center, startRadius: 5, endRadius: 100)) //Effect start from center
-            .frame(width: 300, height: 100)
+            .fill(RadialGradient(colors: [Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1))], center: .center, startRadius: 5, endRadius: 50)) //Effect start from center
+            .frame(width: 200, height: 80)
         
         //Radial Gradient, radial/circular effect center is at top leading
         RoundedRectangle(cornerRadius: 10)
@@ -66,6 +67,12 @@ struct GradientsContentView: View {
             .fill(AngularGradient(colors: [Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1))], center: .topLeading, angle: .degrees(180 + 45))) //Effect Start from 45 degree angle, clockwise
             .frame(width: 100, height: 100)
         
+        
+        //We Can give Gradient in Text
+        Text("iOS")
+            .font(.system(size: 30))
+            .fontWeight(.heavy)
+            .foregroundStyle(LinearGradient(colors: [Color.red, Color.green], startPoint: .leading, endPoint: .trailing))
         Spacer()
     }
 }
