@@ -67,12 +67,20 @@ struct GradientsContentView: View {
             .fill(AngularGradient(colors: [Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1))], center: .topLeading, angle: .degrees(180 + 45))) //Effect Start from 45 degree angle, clockwise
             .frame(width: 100, height: 100)
         
-        
-        //We Can give Gradient in Text
-        Text("iOS")
-            .font(.system(size: 30))
-            .fontWeight(.heavy)
-            .foregroundStyle(LinearGradient(colors: [Color.red, Color.green], startPoint: .leading, endPoint: .trailing))
+        HStack {
+            //We Can give Gradient in Text
+            Text("iOS")
+                .font(.system(size: 30))
+                .fontWeight(.heavy)
+                .foregroundStyle(LinearGradient(colors: [Color.red, Color.green], startPoint: .leading, endPoint: .trailing))
+                .padding(.horizontal)
+
+            //We Can give Gradient in Images
+            Image(systemName: "person.fill")
+                .font(.largeTitle)
+                .foregroundStyle(LinearGradient(colors: [Color.red, Color.green], startPoint: .leading, endPoint: .trailing))
+            
+        }
         Spacer()
     }
 }
